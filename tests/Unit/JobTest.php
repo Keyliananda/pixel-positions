@@ -2,13 +2,9 @@
 
 use App\Models\Employer;
 use App\Models\Job;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class JobTest extends TestCase
-{
-    use DatabaseMigrations;
-}
+uses(RefreshDatabase::class);
 
 it('belongs to an employer', function ()
 {
