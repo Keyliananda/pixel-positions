@@ -19,7 +19,7 @@ class JobFactory extends Factory
     {
         return [
             'employer_id' => Employer::factory(),
-            'title' => fake()->jobTitle(),
+            'title' => fake()->jobTitle,
             'salary' => fake()->randomElement(['$50,000 USD', '$60,000 USD', '$70,000 USD', '$45,000 USD', '$55,000 USD', '$65,000 USD', '$80,000 USD', '$85,000 USD', '$90,000 USD', '$95,000 USD', '$100,000 USD', '$110,000 USD']),
             'location' => fake()->randomElement(['Remote', 'Local']),
             'schedule' => fake()->randomElement(['Full time', 'Part time', '80%']),

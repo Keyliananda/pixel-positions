@@ -16,12 +16,12 @@ class SessionController extends Controller
     {
         $attributes = request()->validate([
             'email' => ['required', 'email'],
-            'password' => ['required']
+            'password' => ['required'],
         ]);
 
         if (! Auth::attempt($attributes)) {
             throw ValidationException::withMessages([
-                'email' => 'Sorry, those credentials do not match.'
+                'email' => 'Sorry, those credentials do not match.',
             ]);
         }
 

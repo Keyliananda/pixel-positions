@@ -13,7 +13,7 @@ class Job extends Model
 
     public function tag(string $name): void
     {
-        $tag = Tag::firstOrCreate(['name' => $name]);
+        $tag = Tag::firstOrCreate(['name' => strtolower($name)]);
 
         $this->tags()->attach($tag);
     }
@@ -22,6 +22,7 @@ class Job extends Model
     {
         return $this->belongsToMany(Tag::class);
     }
+
     public function employer(): BelongsTo
     {
         return $this->belongsTo(Employer::class);

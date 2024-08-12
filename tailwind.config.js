@@ -2,7 +2,7 @@
 export default {
     content: [
         "./resources/**/*.blade.php",
-        "./resources/**/*.js",
+        "./resources/**/*.js"
     ],
     theme: {
         extend: {
@@ -10,10 +10,10 @@ export default {
                 "black": "#060606"
             },
             fontFamily: {
-                "hanken-grotesk":["Hanken Grotesk", "sans-serif"]
+                "hanken-grotesk": ["Hanken Grotesk", "sans-serif"]
             },
             fontSize: {
-                "2xs": ".625rem" //10px
+                "2xs": ".625rem" // 10px
             }
         },
     },
